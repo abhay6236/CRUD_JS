@@ -1,0 +1,601 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* Navbar */
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    padding: 5px 100px;
+    background-color: royalblue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navlink>a {
+    margin: 0px 20px;
+    font-weight: 600;
+
+}
+
+.logo{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+/* Main Section */
+
+.main-container {
+    padding: 70px;
+
+}
+
+
+/*! CreateUser */
+
+/* ========================================
+   CREATE USER PAGE
+   ======================================== */
+
+/* Main container - center content below navbar */
+.create-user-container {
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.create-user-title {
+  margin: 0 0 20px;
+
+  font-size: 30px;
+  font-weight: 700;
+  color: #1f2937;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   FORM CARD
+   ======================================== */
+
+.create-user-form {
+  width: 100%;
+  max-width: 480px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 32px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.10);
+}
+
+
+/* ========================================
+   LABEL
+   ======================================== */
+
+.create-user-label {
+  margin-top: 4px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+
+/* ========================================
+   INPUT
+   ======================================== */
+
+.create-user-input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  font-size: 15px;
+  color: #111827;
+
+  background: #f9fafb;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+/* Placeholder */
+.create-user-input::placeholder {
+  color: #9ca3af;
+}
+
+
+/* Input focus */
+.create-user-input:focus {
+  background: #ffffff;
+
+  border-color: #6366f1;
+
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+/* Remove HTML <br> spacing */
+.create-user-form br {
+  display: none;
+}
+
+
+/* ========================================
+   BUTTON
+   ======================================== */
+
+.create-user-button {
+  width: 100%;
+
+  margin-top: 12px;
+  padding: 13px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* Button hover */
+.create-user-button:hover {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25);
+}
+
+
+/* Button click */
+.create-user-button:active {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   TABLET / MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+  .create-user-container {
+    min-height: calc(100vh - 70px);
+
+    padding: 25px 15px;
+  }
+
+  .create-user-title {
+    font-size: 26px;
+
+    margin-bottom: 16px;
+  }
+
+  .create-user-form {
+    max-width: 100%;
+
+    padding: 24px 20px;
+
+    border-radius: 16px;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   ======================================== */
+
+@media (max-width: 380px) {
+
+  .create-user-container {
+    padding: 20px 12px;
+  }
+
+  .create-user-form {
+    padding: 20px 16px;
+  }
+
+  .create-user-title {
+    font-size: 24px;
+  }
+}
+
+
+
+
+/*! AllUsers */
+
+
+/* ========================================
+   ALL USERS PAGE
+   ======================================== */
+
+/* Main section */
+.main-container {
+  min-height: calc(100vh - 80px);
+  padding: 40px 30px;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   USERS CONTAINER
+   ======================================== */
+
+#users-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+}
+
+
+/* ========================================
+   USER CARD
+   ======================================== */
+
+/*
+  Your JS should create each userDiv/card.
+  This targets direct children of #users-container.
+*/
+
+#users-container > div {
+  width: 100%;
+  max-width: 280px;
+  min-width: 250px;
+
+  box-sizing: border-box;
+  padding: 25px 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+
+  text-align: center;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Card hover */
+#users-container > div:hover {
+  transform: translateY(-6px);
+
+  border-color: #d1d5db;
+
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+}
+
+
+/* ========================================
+   USER AVATAR
+   ======================================== */
+
+#users-container .user-avatar {
+  width: 70px;
+  height: 70px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 0 15px;
+
+  border-radius: 50%;
+
+  background: #eef2ff;
+  color: #4f46e5;
+
+  font-size: 27px;
+  font-weight: 700;
+
+  border: 3px solid #e0e7ff;
+}
+
+
+/* ========================================
+   USER NAME
+   ======================================== */
+
+#users-container h3 {
+  width: 100%;
+
+  margin: 0 0 10px;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  color: #1f2937;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* ========================================
+   USER DETAILS
+   ======================================== */
+
+#users-container p {
+  width: 100%;
+
+  margin: 4px 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+
+  color: #6b7280;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Email */
+#users-container p:first-of-type {
+  color: #4b5563;
+}
+
+
+/* Password / details */
+#users-container p:nth-of-type(2) {
+  color: #9ca3af;
+}
+
+
+/* ========================================
+   BUTTON AREA
+   ======================================== */
+
+/*
+  Since your HTML has buttons directly inside
+  the card, flex-wrap keeps them from overlapping.
+*/
+
+#users-container > div {
+  /* Already flex */
+}
+
+
+/* Buttons */
+#users-container button {
+  min-width: 105px;
+  height: 40px;
+
+  padding: 0 16px;
+
+  border: none;
+  border-radius: 9px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* ========================================
+   EDIT BUTTON
+   ======================================== */
+
+#users-container .edit-btn {
+  margin-top: 18px;
+
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+
+#users-container .edit-btn:hover {
+  background: #e0e7ff;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(79, 70, 229, 0.15);
+}
+
+
+/* ========================================
+   DELETE BUTTON
+   ======================================== */
+
+#users-container .delete-btn {
+  margin-top: 10px;
+
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+
+#users-container .delete-btn:hover {
+  background: #fee2e2;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 5px 12px rgba(220, 38, 38, 0.12);
+}
+
+
+/* ========================================
+   DESKTOP
+   ======================================== */
+
+@media (min-width: 1200px) {
+
+  #users-container {
+    max-width: 1200px;
+    justify-content: flex-start;
+  }
+
+  #users-container > div {
+    flex: 0 0 260px;
+  }
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+  .main-container {
+    padding: 30px 20px;
+  }
+
+  #users-container {
+    gap: 20px;
+  }
+
+  #users-container > div {
+    flex: 0 0 calc(50% - 10px);
+    max-width: 320px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+  .main-container {
+    min-height: calc(100vh - 70px);
+
+    padding: 25px 15px;
+  }
+
+  #users-container {
+    width: 100%;
+
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    gap: 18px;
+  }
+
+  #users-container > div {
+    width: 100%;
+    max-width: 380px;
+    min-width: 0;
+
+    flex: 0 0 auto;
+  }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+   ======================================== */
+
+@media (max-width: 380px) {
+
+  .main-container {
+    padding: 20px 12px;
+  }
+
+  #users-container > div {
+    padding: 22px 18px;
+  }
+
+  #users-container .user-avatar {
+    width: 62px;
+    height: 62px;
+
+    font-size: 24px;
+  }
+
+  #users-container h3 {
+    font-size: 18px;
+  }
+
+  #users-container p {
+    font-size: 13px;
+  }
+}

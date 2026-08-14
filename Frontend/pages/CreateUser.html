@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../index.css" />
+    <script src="../scripts/CreateUser.js" defer></script>
+  </head>
+
+  <body>
+    <!-- NavBar -->
+    <header class="navbar">
+      <figure class="logo">CRUD-APP</figure>
+
+      <nav class="navlink">
+        <a href="../index.html">Home</a>
+        <a href="./CreateUser.html">Create User</a>
+        <a href="./AllUsers.html">All Users</a>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="create-user-container">
+      <h1 class="create-user-title">Create User</h1>
+
+      <form id="register-form" class="create-user-form">
+        <label class="create-user-label" for="fullname">Fullname</label>
+        <input
+          class="create-user-input"
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="Enter your name ...."
+          required
+        />
+        <br />
+
+        <label class="create-user-label" for="email">Email</label>
+        <input
+          class="create-user-input"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email ...."
+          required
+        />
+        <br />
+
+        <label class="create-user-label" for="password">Password</label>
+        <input
+          class="create-user-input"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password ...."
+          required
+          minlength="6"
+        />
+        <br />
+
+        <button class="create-user-button" type="submit">Create</button>
+      </form>
+    </main>
+  </body>
+</html>
