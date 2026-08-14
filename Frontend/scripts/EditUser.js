@@ -8,7 +8,7 @@ let params = new URLSearchParams(window.location.search)
 let id = params.get('id')
 
 async function getEditUser() {
-    let resp = await fetch(`http://localhost:5000/users/${id}`)
+    let resp = await fetch(`https://crud-js-uhwh.onrender.com/users/${id}`)
     let data = await resp.json()
     console.log(data)
 
@@ -26,7 +26,7 @@ editform.addEventListener("submit",async (e)=>{
         email : email.value.toLowerCase(),
         password: password.value,
     }
-     await fetch(`http://localhost:5000/users/${id}`,{
+     await fetch(`https://crud-js-uhwh.onrender.com/users/${id}`,{
         method:"PUT",
         body: JSON.stringify(updateData),
         headers:{

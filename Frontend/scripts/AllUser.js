@@ -2,7 +2,7 @@ const usersContainer = document.querySelector("#users-container")
 
 async function getAllUsers() {
     try {
-        let resp =await fetch("http://localhost:5000/users");
+        let resp =await fetch("https://crud-js-uhwh.onrender.com/users");
         let data = await resp.json();
         // console.log(data)
         displayUsers(data)
@@ -38,7 +38,7 @@ function displayUsers(users){
 
 
 async function deleteUser(id) {
-    await fetch(`http://localhost:5000/users/${id}`,{
+    await fetch(`https://crud-js-uhwh.onrender.com/users/${id}`,{
         method:"DELETE",
     })
     
